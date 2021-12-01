@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block ordinary %}
+    <p>
+        <h>user_{{userid}} is following</h>
+    </p>
+    <p>
+    {% for item in followlist %}
+        <a href="space?userid={{ item[0] }}"> {{ item }} </a>
+        <br>
+    {% endfor %}
+    </p>
+    
+{% endblock %}
